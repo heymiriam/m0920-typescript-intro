@@ -45,8 +45,8 @@ export default () => {
     const integer : number= 6;
     const float : number= 6.66;
     const hex: string = '0xf00d';
-    const binary: number = 0b1010011010;
-    const octal: number = 0o744;
+    const binary: string = "0b1010011010";
+    const octal: string = "0o744";
     const negZero: number = -0;
     const actuallyNumber: number = NaN;
     const largestNumber : number= Number.MAX_VALUE;
@@ -89,7 +89,7 @@ export default () => {
     // We want to represent an inventoryItem as a structure where
     // the first entry is the item name and the second is the quantity
   
-    const inventoryItem: Array<any>= ['fidget wibbit', 11];
+    const inventoryItem:[ string, number]= ['fidget wibbit', 11];
   
     // later we destructure it
     const [name, qty] = inventoryItem;
