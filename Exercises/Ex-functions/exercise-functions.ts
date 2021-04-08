@@ -64,8 +64,8 @@ const Exercise3 = () => {
     return letters.reduce((accum:number, curr:string) => (accum += getPointsFor(curr)), 0)
   }
 
-  function getPointsFor(letter: string[]) {
-    const lettersAndPoints:(string | number)[][] = [
+  function getPointsFor(letter: string) {
+    const lettersAndPoints = [
       ['AEOIULNRST', 1],
       ['DG', 2],
       ['BCMP', 3],
@@ -75,8 +75,8 @@ const Exercise3 = () => {
       ['QZ', 10],
     ]
 
-    return lettersAndPoints.reduce((computedScore:number, pointsTuple:(number)[]) => {
-      const [letters, score]:(string | number[]) = pointsTuple
+    return lettersAndPoints.reduce((computedScore:number, pointsTuple:[string, number]) => {
+      const [letters, score]= pointsTuple
       if (letters.split('').find((ll) => ll === letter)) {
         return (computedScore += score)
       }
