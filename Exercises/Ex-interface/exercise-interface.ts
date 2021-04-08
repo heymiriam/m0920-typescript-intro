@@ -83,7 +83,10 @@ interface PersonInterface{
     latitude:number;
     longitude:number;
   }
-  interface City{
+  /*interface City{
+    coords:Coords;
+  }*/
+  type City{
     coords:Coords;
   }
   const montreal = {
